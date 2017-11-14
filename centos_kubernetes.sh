@@ -33,6 +33,9 @@ for SERVICES in ` ls /usr/lib/systemd/system/kub* | awk -F '/' '{print $6}' ` do
 echo "sleep 2 s ,wait service loading!"
 sleep 2;
 
+
+
+
 ## test kubectl
 kubectl get nodes ;
 
