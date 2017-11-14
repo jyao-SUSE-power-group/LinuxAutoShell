@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+# usage ： 
+#        curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/centos_kubernetes.sh | sh
 #作者：jyaoSUSE
 #链接：https://juejin.im/post/5a0952f25188257bf5334952
 #来源：掘金
