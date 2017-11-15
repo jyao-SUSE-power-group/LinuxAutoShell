@@ -1,3 +1,5 @@
+## https://zh.opensuse.org/openSUSE:%E5%8D%87%E7%BA%A7_Tumbleweed
+## ?????? leap ? ?????? tumbleweed
 ## openSUSE org
 mkdir /etc/zypp/repos.d/old
 mv /etc/zypp/repos.d/*.repo /etc/zypp/repos.d/old
@@ -14,7 +16,7 @@ zypper ar -f -d -c http://download.opensuse.org/tumbleweed/repo/src-non-oss repo
 mkdir /etc/zypp/repos.d/old
 mv /etc/zypp/repos.d/*.repo /etc/zypp/repos.d/old
 
-sudo zypper mr -da
+
 zypper ar -f -c http://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/oss repo-oss
 zypper ar -f -c http://mirrors.ustc.edu.cn/opensuse/tumbleweed/repo/non-oss repo-non-oss
 zypper ar -f -c http://download.opensuse.org/tumbleweed/repo/debug repo-debug
@@ -24,7 +26,7 @@ zypper ar -f -d -c http://download.opensuse.org/tumbleweed/repo/src-oss repo-src
 zypper ar -f -d -c http://download.opensuse.org/tumbleweed/repo/src-non-oss repo-src-non-oss
 
 #
-
+sudo zypper mr -da
 sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/oss USTC:42.3:OSS
 sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/distribution/leap/42.3/repo/non-oss USTC:42.3:NON-OSS
 sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/oss USTC:42.3:UPDATE-OSS
@@ -34,7 +36,7 @@ sudo zypper ar -fc https://mirrors.ustc.edu.cn/opensuse/update/leap/42.3/non-oss
 
 mkdir /etc/zypp/repos.d/old
 mv /etc/zypp/repos.d/*.repo /etc/zypp/repos.d/old
-sudo zypper mr -da
+# sudo zypper mr -da
 
 zypper ar -f -c https://mirrors.aliyun.com/opensuse/tumbleweed/repo/oss repo-oss
 zypper ar -f -c https://mirrors.aliyun.com/opensuse/tumbleweed/repo/non-oss repo-non-oss
@@ -47,3 +49,12 @@ zypper ar -f -d -c http://download.opensuse.org/tumbleweed/repo/src-non-oss repo
 # https://mirrors.aliyun.com/packman/openSUSE_Tumbleweed/
 
 zypper addrepo -f https://mirrors.aliyun.com/packman/openSUSE_Tumbleweed/ aliyun-packman
+
+
+
+zypper install htop net-tools  htop vim  iptables  openssh   byobu git zsh  -y
+
+ /usr/bin/ossutil cp -fr oss://datastoreforjy/aliroot /root
+
+
+

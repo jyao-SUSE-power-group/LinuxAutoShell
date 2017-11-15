@@ -16,7 +16,7 @@ curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/mast
 yum makecache ;
 yum update -y;
 
-yum install --enablerepo=virt7-docker-common-release htop net-tools etcd htop vim e4fsprogs iptables  openssh-server   byobu git zsh  -y ;
+yum install --enablerepo=virt7-docker-common-release htop net-tools  htop vim e4fsprogs iptables  openssh-server   byobu git zsh  -y ;
 
 yum -y install --enablerepo=virt7-docker-common-release kubernetes etcd flannel
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
