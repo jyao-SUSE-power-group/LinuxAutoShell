@@ -21,6 +21,6 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 
 sudo mkdir -p /etc/docker_mysql
-sh -c ' curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/my.cnf > /etc/docker_mysql/my.cnf '
+sudo sh -c ' curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/my.cnf > /etc/docker_mysql/my.cnf '
 
 sudo docker run --name mymysql --restart=always -d -p 3306:3306 -v /etc/docker_mysql/my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -v /etc/docker_mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root  mysql
