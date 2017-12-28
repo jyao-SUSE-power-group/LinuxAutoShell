@@ -7,8 +7,9 @@ sudo pacman kcm-fcitx fcitx-sogoupinyin fcitx-qt4 fcitx-qt5
 cp ~/.xprofile ~/.xprofile.bak
 
 cat << EOF >>  ~/.xprofile
+export LC_CTYPE=zh_CN.UTF-8
 
-export LC_ALL=zh_CN.UTF-8
+#export LC_ALL=zh_CN.UTF-8
 
 export XIM=fcitx  
 
