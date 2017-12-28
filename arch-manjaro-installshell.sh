@@ -5,19 +5,19 @@
 #        curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/arch-manjaro-installshell.sh | bash
 #作者：jyaoSUSE
 
-echo "`whoami` ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo echo "`whoami` ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-echo " alias sc='~/.zshrc' " >> /etc/sudoers
+echo " alias sc=' source ~/.zshrc' " >> /~/.zshrc
 
-sudo su 
 
-pacman-mirrors  -c China -b unstable 
 
-rm -fr /var/lib/pacman/db.lck
+sudo pacman-mirrors  -c China -b unstable 
 
-pacman -S  --noconfirm vim 
+sudo rm -fr /var/lib/pacman/db.lck
 
-pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh 
+sudo pacman -S  --noconfirm vim 
+
+sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh 
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
 
@@ -26,4 +26,4 @@ git config --global user.name "jyao"
 
 
 
-curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf
+sudo curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf
