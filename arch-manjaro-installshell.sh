@@ -17,7 +17,9 @@ sudo rm -fr /var/lib/pacman/db.lck
 
 sudo pacman -S  --noconfirm vim 
 
-sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh  docker net-tools  archlinuxcn-keyring
+sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh  docker net-tools  archlinuxcn-keyring python-pip
+
+sudo pip install mycli
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
 
