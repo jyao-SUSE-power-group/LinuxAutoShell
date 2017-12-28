@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# usage ： curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker _mysql.sh | bash
+
+
+#usage ： curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker_mysql.sh | bash
 
 
 sudo mkdir -p /etc/docker
