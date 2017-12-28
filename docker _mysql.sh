@@ -1,8 +1,9 @@
+#!/usr/bin/env bash
 
 
 
 # usage ：
-#usage ： curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker_mysql.sh | bash
+#usage ： sh -c ' curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker_mysql.sh '
 
 #作者：jyaoSUSE
 
