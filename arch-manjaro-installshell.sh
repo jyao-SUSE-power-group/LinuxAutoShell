@@ -17,9 +17,13 @@ rm -fr /var/lib/pacman/db.lck
 
 pacman -S  --noconfirm vim 
 
-pacman -Syu --noconfirm htop net-tools htop   openssh-server byobu git zsh 
+pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh 
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
 
 git config --global user.email "jackyao713911@gmail.com" 
 git config --global user.name "jyao"
+
+
+
+curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf
