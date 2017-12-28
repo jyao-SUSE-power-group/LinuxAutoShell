@@ -17,7 +17,7 @@ sudo rm -fr /var/lib/pacman/db.lck
 
 sudo pacman -S  --noconfirm vim 
 
-sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh  docker net-tools 
+sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh  docker net-tools  archlinuxcn-keyring
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
 
@@ -31,3 +31,6 @@ sudo sh -c 'curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAu
 sudo systemctl enable docker.service
 
 sudo systemctl start docker.service
+
+## fstab  ntfs  config
+# /dev/sdb1    /home/shim/sdb1    ntfs    defaults,user,rw,iocharset=utf8,umask=000,nls=utf8    0    0
