@@ -3,18 +3,18 @@
 
 
 # usage ：
-#usage ： sh -c ' curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker_mysql.sh '
+#usage ：  curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/docker_mysql.sh | bash
 
 #作者：jyaoSUSE
 
 
 
 sudo mkdir -p /etc/docker
-sudo cat << EOF >> /etc/docker/daemon.json
+sudo sh -c ' cat << EOF >> /etc/docker/daemon.json
 {
   "registry-mirrors": ["https://0e3kttqp.mirror.aliyuncs.com"]
 }
-EOF
+EOF'
 
 
 sudo systemctl daemon-reload
