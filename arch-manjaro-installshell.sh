@@ -17,7 +17,7 @@ sudo rm -fr /var/lib/pacman/db.lck
 
 sudo pacman -S  --noconfirm vim 
 
-sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh 
+sudo pacman -Syu --noconfirm htop net-tools htop yaourt  openssh-server byobu git zsh  docker net-tools 
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
 
@@ -27,3 +27,7 @@ git config --global user.name "jyao"
 
 
 sudo sh -c 'curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf'
+
+sudo systemctl enable docker.service
+
+sudo systemctl start docker.service
