@@ -5,7 +5,7 @@
 #        curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/arch-manjaro-installshell.sh | bash
 #作者：jyaoSUSE
 
-sudo echo "`whoami` ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo sh -c ' echo "`whoami` ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers '
 
 echo " alias sc=' source ~/.zshrc' " >> /~/.zshrc
 
@@ -26,4 +26,4 @@ git config --global user.name "jyao"
 
 
 
-sudo curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf
+sudo sh -c 'curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/master/pacman.conf > /etc/pacman.conf'
