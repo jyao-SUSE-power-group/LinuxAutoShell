@@ -16,7 +16,29 @@ curl https://raw.githubusercontent.com/jyao-SUSE-power-group/LinuxAutoShell/mast
 yum makecache ;
 yum update -y;
 
-yum install --enablerepo=virt7-docker-common-release htop net-tools  htop vim e4fsprogs iptables  openssh-server   byobu git zsh  -y ;
+
+
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# Step 2: 添加软件源信息
+sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+# Step 3: 更新并安装 Docker-CE
+sudo yum makecache fast
+sudo yum -y install docker-ce
+# Step 4: 开启Docker服务
+sudo service docker start
+
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://0e3kttqp.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+
+
+yum install  htop net-tools  htop vim e4fsprogs iptables  openssh-server   byobu git zsh  -y ;
 
 yum -y install --enablerepo=virt7-docker-common-release kubernetes etcd flannel
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ;
@@ -32,6 +54,9 @@ for SERVICES in ` ls /usr/lib/systemd/system/kub* | awk -F '/' '{print $6}' ` do
 
 echo "sleep 2 s ,wait service loading!"
 sleep 2;
+
+
+
 
 
 
