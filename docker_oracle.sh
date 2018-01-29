@@ -20,7 +20,7 @@ EOF'
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
-docker run -d --name=oracle2 --restart=always   -p 1522:1521 -p 5501:8080  -e IMPORT_FROM_VOLUME=true -v /my/oracle/data:/u01/app/oracle  sath89/oracle-12c
+docker run -d --name=oracle2  --restart=always  -e TZ="Asia/Shanghai" -v /etc/localtime:/etc/localtime:ro  -p 1522:1521 -p 5501:8080  -e IMPORT_FROM_VOLUME=true -v /my/oracle/data:/u01/app/oracle  sath89/oracle-12c
 
 
 #Connect database with following setting:
