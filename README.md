@@ -21,3 +21,6 @@ git config --global user.name "jyao"
 ```
 sudo dnf install redhat-rpm-config
 ```
+
+### ruby
+https://www.runoob.com/ruby/ruby-rubygems.html
