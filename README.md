@@ -24,3 +24,12 @@ sudo dnf install redhat-rpm-config
 
 ### ruby
 https://www.runoob.com/ruby/ruby-rubygems.html
+```sh
+gem sources --remove https://rubygems.org/
+gem sources -a http://ruby.taobao.org/
+```
+
+### zlib is missing; necessary for building libxml2
+```bash
+install zlib-devel
+```
