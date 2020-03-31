@@ -33,3 +33,18 @@ gem sources -a http://ruby.taobao.org/
 ```bash
 install zlib-devel
 ```
+
+### 安装 kind `·k8s in docker`
+
+```bash
+go env -w GO111MODULE=auto
+go env -w GOPROXY=https://goproxy.cn,direct
+GO111MODULE="on" go get sigs.k8s.io/kind
+
+# ln -s 
+
+ln -s $(go env GOPATH)/bin/kind /usr/bin
+
+kind create cluster
+
+```
