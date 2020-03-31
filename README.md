@@ -48,3 +48,38 @@ ln -s $(go env GOPATH)/bin/kind /usr/bin
 kind create cluster
 
 ```
+
+```yml
+kind: Cluster
+apiVersion: kind.sigs.k8s.io/v1alpha3
+kubeadmConfigPatches:
+- |
+  apiVersion: kubeadm.k8s.io/v1beta1
+  kind: ClusterConfiguration
+  metadata:
+    name: config
+  networking:
+    serviceSubnet: 10.0.0.0/16
+  imageRepository: registry.aliyuncs.com/google_containers
+  nodeRegistration:
+    kubeletExtraArgs:
+      pod-infra-container-image: registry.aliyuncs.com/google_containers/pause:3.1
+- |
+  apiVersion: kubeadm.k8s.io/v1beta1
+  kind: InitConfiguration
+  metadata:
+    name: config
+  networking:
+    serviceSubnet: 10.0.0.0/16
+  imageRepository: registry.aliyuncs.com/google_containers
+nodes:
+- role: control-plane
+- role: control-plane
+- role: control-plane
+- role: worker
+- role: worker
+- role: worker
+
+```
+> kind create cluster --name kind-3 --config k8s-cluster.yaml
+
